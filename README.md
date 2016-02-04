@@ -4,13 +4,9 @@
 L’objectif de cet exercice est de réaliser une page web qui va permettre à un utilisateur de partager sa position, via une carte Google Maps, à qui il le souhaite, via un envoi de mail (preview sur http://imhere.azurewebsites.net/) 
 
 Cet exercice est découpé en 2 parties : 
-1.	**Le côté client**
-    
-    Vous allez devoir intégrer une carte Google Maps en JavaScript. Lorsque que l’utilisateur confirme sa position, un formulaire lui permet de préciser son mail, le mail du destinataire et un message.
+1.	**Le côté client**: vous allez devoir intégrer une carte Google Maps en JavaScript. Lorsque que l’utilisateur confirme sa position, un formulaire lui permet de préciser son mail, le mail du destinataire et un message.
 Lorsque l’utilisateur confirme l’envoi de sa position, ces données ainsi qu’une version image de la carte (et de sa position sur celle-ci) sont envoyées vers une page PHP via un appel AJAX. 
-2.	**Le côté serveur**
-
-    Une page PHP va pouvoir recevoir ces données, créer et envoyer un mail au destinataire précisé. Ce mail contiendra l’image de la carte (et la position de l’expéditeur) et le message. 
+2.	**Le côté serveur**: une page PHP va pouvoir recevoir ces données, créer et envoyer un mail au destinataire précisé. Ce mail contiendra l’image de la carte (et la position de l’expéditeur) et le message. 
 La page PHP renvoie un statut en JSON pour confirmer que l’envoi à fonctionné ou non.
 
 Cet exercice peut aussi réalisé avec du Node.js côté serveur bien évidemment, mais les instructions données ci-dessous concernent du PHP.
@@ -56,7 +52,8 @@ Cet exercice peut aussi réalisé avec du Node.js côté serveur bien évidemmen
 6.	Si le mail n’a pu être envoyé, appelez la fonction `json_mail_error($mail->ErrorInfo)` (où `$mail` est l’objet PHPMailer)
 
 ### On repasse **côté client**
-1.	Gérez le retour de la requête AJAX avec l’aide des événements « done » (dans le cas où ça a marché) et « fail » (dans le cas où ça n’a pas marché), de cette manière
+
+Gérez le retour de la requête AJAX avec l’aide des événements « done » (dans le cas où ça a marché) et « fail » (dans le cas où ça n’a pas marché), de cette manière
 
 ```javascript
 
@@ -73,8 +70,9 @@ Cet exercice peut aussi réalisé avec du Node.js côté serveur bien évidemmen
        });   
 ```
 
-2.	Si ça a marché, affichez un message de confirmation – vous pouvez utiliser le plugin SweetAlert http://t4t5.github.io/sweetalert/ 
-3.	Si ça n’a pas marché, le détail de l’erreur se trouve dans la variable xhr : `xhr.responseText`
+Si ça a marché, affichez un message de confirmation – vous pouvez utiliser le plugin SweetAlert http://t4t5.github.io/sweetalert/ 
+
+Si ça n’a pas marché, le détail de l’erreur se trouve dans la variable xhr : `xhr.responseText`
 Cependant, ce champ est en JSON. Pour pouvoir l’utiliser, il faut transformer ce JSON en un objet JavaScript. Vous ferez donc ceci
 ```javascript
 var err = JSON.parse(xhr.responseText);
