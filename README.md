@@ -4,6 +4,7 @@
 L’objectif de cet exercice est de réaliser une page web qui va permettre à un utilisateur de partager sa position, via une carte Google Maps, à qui il le souhaite, via un envoi de mail (preview sur http://imhere.azurewebsites.net/) 
 
 Cet exercice est découpé en 2 parties : 
+
 1.	**Le côté client**: vous allez devoir intégrer une carte Google Maps en JavaScript. Lorsque que l’utilisateur confirme sa position, un formulaire lui permet de préciser son mail, le mail du destinataire et un message.
 Lorsque l’utilisateur confirme l’envoi de sa position, ces données ainsi qu’une version image de la carte (et de sa position sur celle-ci) sont envoyées vers une page PHP via un appel AJAX. 
 
