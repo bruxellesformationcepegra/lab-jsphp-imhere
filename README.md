@@ -6,6 +6,7 @@ L’objectif de cet exercice est de réaliser une page web qui va permettre à u
 Cet exercice est découpé en 2 parties : 
 1.	**Le côté client**: vous allez devoir intégrer une carte Google Maps en JavaScript. Lorsque que l’utilisateur confirme sa position, un formulaire lui permet de préciser son mail, le mail du destinataire et un message.
 Lorsque l’utilisateur confirme l’envoi de sa position, ces données ainsi qu’une version image de la carte (et de sa position sur celle-ci) sont envoyées vers une page PHP via un appel AJAX. 
+
 2.	**Le côté serveur**: une page PHP va pouvoir recevoir ces données, créer et envoyer un mail au destinataire précisé. Ce mail contiendra l’image de la carte (et la position de l’expéditeur) et le message. 
 La page PHP renvoie un statut en JSON pour confirmer que l’envoi à fonctionné ou non.
 
